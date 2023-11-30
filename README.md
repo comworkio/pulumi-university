@@ -12,4 +12,4 @@ Cette université se penche sur les avantages de Pulumi par rapport à Terraform
 
 Pour terminer cette université, nous réaliserons une démonstration de l’utilisation du SDK Pulumi pour déclarer notre infrastructure en utilisant le Python et le Go, pour montrer ainsi, qu’il n’a jamais été aussi simple pour un développeur de gérer et provisionner l’infrastructure.
 
-Nous irons un peu plus loin pour montrer que cela offre une perspective nouvelle de transformer son IaC en véritable API et produit. Nous en ferons la démonstration en utilisant le framework Python FastAPI et montreront un exemple de produit DaaS (deployment as a service) bâti autour de ce concept.
+Pour ce faire, nous irons un peu plus loin pour montrer que cela offre une perspective nouvelle de transformer son IaC en véritable API et produit. Nous en ferons la démonstration en utilisant le framework Python FastAPI et montreront un exemple de produit DaaS (deployment as a service) bâti autour de ce concept.
