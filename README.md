@@ -27,3 +27,5 @@ Cette université est une fusion de deux talks qui ont été donnés sur Pulumi 
 * Première partie : _Mettre les références de Julien_
 * Deuxième partie acceptée à Devops DDay mais désistement
 * Une idée du contenu de la deuxième partie se retrouve aussi dans ce live organisé chez Groupbees, mais sera moins orienté sur le produit mais plus dans la façon dont il a été conçu pour répondre aux enjeux de multi-cloud et de découplage: https://youtu.be/RF0C3HGIBHA?si=UTqAvOTc9djGyUiH
+
+En résumé, en deuxième partie, on fera une session de live coding avec un scénario complet de provisionnement d'infra en Python et en Go puis l'exposition de ce scénario de provisioning sous forme d'API avec le framework FastAPI.
