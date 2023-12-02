@@ -6,11 +6,11 @@ Title: "Pulumi, ou comment gérer votre infrastructure avec votre langage préf�
 
 N’avez-vous jamais rêvé de pouvoir gérer votre infrastructure avec votre langage de programmation préféré ? D'exposer vos scripts de provisionnement et déploiement d'infrastructure comme un véritable service web moderne et utilisable par le plus grand nombre ?
 
-Vous connaissez certainement Terraform ? Pulumi se positionne comme une alternative très sérieuse à cette solution extrêmement populaire dans le domaine de l'infrastructure en tant que code (IaC) et nous allons nous intéresser à la proposition de valeur de Pulumi par rapport à ce dernier.
+Vous connaissez certainement Terraform ; Pulumi se positionne comme une alternative sérieuse à cette solution extrêmement populaire dans le domaine de l'infrastructure en tant que code (IaC).
 
-Pour ce faire, nous mettrons en lumière les points forts de la solution comme la programmation multi-langages qui permet de rendre l'IaC accessible à beaucoup plus de monde, la possibilité de pouvoir mieux tester son code, la possibilité de mieux gérer une couche d'abstraction multi-cloud ou de faire de véritables applications web modernes de déploiement...
+Dans cette université nous vous proposons de découvrir ce challenger en mettant en lumière ses points forts comme la programmation multi-langages, la possibilité de mieux tester son code, d'avoir une couche d'abstraction multi-cloud plus efficace et même la capacité de réaliser de véritables applications web modernes de déploiement ...
 
-Pour illustrer tout ça, nous réaliserons une démonstration complète de l’utilisation de Pulumi en utilisant les langages Python et Go et nous irons plus loin pour en faire une véritable API de déploiement en utilisant le framework FastAPI.
+Venez découvrir Pulumi, l'essayer et qui sait ? Peut-être l'adopter !
 
 ## Elevator pitch
 
