@@ -1,4 +1,4 @@
-# Démonstration 1 : Un premier projet
+# Démonstration 2 : Jouer avec les templates
 
 Dans cette démonstration, nous allons démontrer comment utiliser les templates prédéfinis de Pulumi.
 
