@@ -1,0 +1,6 @@
+name: backends
+runtime:
+  name: python
+  options:
+    virtualenv: venv
+description: Backends (pulumi-states) des démonstrations
