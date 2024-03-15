@@ -1,0 +1,6 @@
+name: 3_jouer_avec_les_states
+runtime:
+  name: python
+  options:
+    virtualenv: venv
+description: Jouer avec les states Pulumi
