@@ -10,6 +10,7 @@ Pour ajouter un nouveau bucket (pour une nouvelle démonstration), il suffit d'a
 ## Commandes
 
 ```bash
+pulumi login --local
 export PULUMI_CONFIG_PASSPHRASE=""
 pulumi stack select -s dev
 pulumi preview --non-interactive

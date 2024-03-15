@@ -8,11 +8,17 @@ Dans cette démonstration, nous allons voir comment fonctionne le stockage de l'
 # Lister les templates disponibles
 pulumi list -l
 pulumi new google-native-python --force
+
+# Déployer un bucket
 export PULUMI_CONFIG_PASSPHRASE=""
+export PULUMI_STATE_NAME="gs://part1_demo3_states-69b90a8/"
 gcloud auth login <e-mail>
-pulumi login gs://part1_demo3_states-69b90a8/
+pulumi login ${PULUMI_STATE_NAME}
 pulumi preview
 pulumi update
+
+# Regarder le contenu du bucket (.pulumi/)
+gcloud storage ls --recursive ${PULUMI_STATE_NAME}
 ```
 
 > L'option `--force` est utilisé car le dossier existe déjà et n'est pas vide.
