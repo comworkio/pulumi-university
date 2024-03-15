@@ -11,6 +11,7 @@ pulumi new google-native-python --force
 export PULUMI_CONFIG_PASSPHRASE=""
 gcloud auth login <e-mail>
 pulumi preview
+pulumi update
 ```
 
 > L'option `--force` est utilisé car le dossier existe déjà et n'est pas vide.
