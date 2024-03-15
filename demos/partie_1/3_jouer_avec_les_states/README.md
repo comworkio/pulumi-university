@@ -10,6 +10,7 @@ pulumi list -l
 pulumi new google-native-python --force
 export PULUMI_CONFIG_PASSPHRASE=""
 gcloud auth login <e-mail>
+pulumi login gs://part1_demo3_states-69b90a8/
 pulumi preview
 pulumi update
 ```
