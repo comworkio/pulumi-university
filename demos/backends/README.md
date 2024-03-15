@@ -6,6 +6,8 @@ Les états seront stockés dans des buckets GCS.
 ## Commandes
 
 ```bash
-pulumi preview
-pulumi update
+export PULUMI_CONFIG_PASSPHRASE=""
+pulumi stack select -s dev
+pulumi preview --non-interactive
+pulumi update --non-interactive --yes
 ```
