@@ -9,6 +9,7 @@ Dans cette démonstration, nous allons voir comment fonctionne le stockage de l'
 pulumi list -l
 pulumi new google-native-python --force
 export PULUMI_CONFIG_PASSPHRASE=""
+gcloud auth login <e-mail>
 pulumi preview
 ```
 
