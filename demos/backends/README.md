@@ -10,4 +10,9 @@ export PULUMI_CONFIG_PASSPHRASE=""
 pulumi stack select -s dev
 pulumi preview --non-interactive
 pulumi update --non-interactive --yes
+
+# Lister les buckets
+export PROJECT_NAME="qualified-sum-417111"
+gcloud config set project ${PROJECT_NAME}
+gcloud storage ls
 ```
