@@ -1,0 +1,6 @@
+name: 4_crer_des_ressources_via_pulumi_yaml
+runtime:
+  name: python
+  options:
+    virtualenv: venv
+description: Créer des ressources sur GCP
