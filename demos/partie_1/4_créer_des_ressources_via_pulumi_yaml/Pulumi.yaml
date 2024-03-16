@@ -1,6 +1,6 @@
 name: 4_crer_des_ressources_via_pulumi_yaml
-runtime:
-  name: python
-  options:
-    virtualenv: venv
-description: Créer des ressources sur GCP
+runtime: yaml
+description: Créer des ressources via Pulumi YAML
+resources:
+  my_bucket:
+    type: google-native:storage/v1:Bucket
