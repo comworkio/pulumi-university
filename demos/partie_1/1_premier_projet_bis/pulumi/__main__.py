@@ -10,7 +10,7 @@ service_port = config.get("servicePort", "80")
 
 # Create a new network for the virtual machine.
 network = gcp.compute.Network(
-    "network",
+    "demo1network",
     gcp.compute.NetworkArgs(
         auto_create_subnetworks=False,
     ),
@@ -18,7 +18,7 @@ network = gcp.compute.Network(
 
 # Create a subnet on the network.
 subnet = gcp.compute.Subnetwork(
-    "subnet",
+    "demo1subnet",
     gcp.compute.SubnetworkArgs(
         ip_cidr_range="10.0.1.0/24",
         network=network.id,
@@ -27,7 +27,7 @@ subnet = gcp.compute.Subnetwork(
 
 # Create a firewall allowing inbound access over ports 80 (for HTTP) and 22 (for SSH).
 firewall = gcp.compute.Firewall(
-    "firewall",
+    "demo1firewall",
     gcp.compute.FirewallArgs(
         network=network.self_link,
         allows=[
@@ -67,8 +67,9 @@ metadata_startup_script = f"""#!/bin/bash
 
 # Create the virtual machine.
 instance = gcp.compute.Instance(
-    "demo1bis",
+    "demo1instance",
     gcp.compute.InstanceArgs(
+        name="demo1instance",
         machine_type=machine_type,
         boot_disk=gcp.compute.InstanceBootDiskArgs(
             initialize_params=gcp.compute.InstanceBootDiskInitializeParamsArgs(
