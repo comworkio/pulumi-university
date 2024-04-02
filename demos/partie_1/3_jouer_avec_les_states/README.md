@@ -9,10 +9,12 @@ Dans cette démonstration, nous allons voir comment fonctionne le stockage de l'
 pulumi list -l
 pulumi new google-native-python --force
 
+# Possible de déclarer le bucket (backend) via une variable d'env :
+# export PULUMI_STATE_NAME="gs://part1_demo3_states-69b90a8/"
+# gcloud auth login <e-mail>
+# pulumi login ${PULUMI_STATE_NAME}
+
 # Déployer un bucket
-export PULUMI_STATE_NAME="gs://part1_demo3_states-69b90a8/"
-gcloud auth login <e-mail>
-pulumi login ${PULUMI_STATE_NAME}
 pulumi preview
 pulumi update
 
