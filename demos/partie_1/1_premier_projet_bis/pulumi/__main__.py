@@ -67,7 +67,7 @@ metadata_startup_script = f"""#!/bin/bash
 
 # Create the virtual machine.
 instance = gcp.compute.Instance(
-    "instance",
+    "demo1bis",
     gcp.compute.InstanceArgs(
         machine_type=machine_type,
         boot_disk=gcp.compute.InstanceBootDiskArgs(
