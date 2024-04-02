@@ -1,3 +1,5 @@
 encryptionsalt: v1:tDFJzbGsxI4=:v1:RtreaMkA4G/YjGoH:Zt3Or1S+2rLnaeEh5n3+l4lWERtwlg==
 config:
   google-native:project: qualified-sum-417111
+backend:
+  url: 'gs://part1_demo1_bis_states-6d0b7a1'
