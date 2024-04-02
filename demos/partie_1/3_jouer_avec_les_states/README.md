@@ -10,7 +10,6 @@ pulumi list -l
 pulumi new google-native-python --force
 
 # Déployer un bucket
-export PULUMI_CONFIG_PASSPHRASE=""
 export PULUMI_STATE_NAME="gs://part1_demo3_states-69b90a8/"
 gcloud auth login <e-mail>
 pulumi login ${PULUMI_STATE_NAME}

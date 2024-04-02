@@ -11,13 +11,12 @@ Pour ajouter un nouveau bucket (pour une nouvelle démonstration), il suffit d'a
 
 ```bash
 pulumi login --local
-export PULUMI_CONFIG_PASSPHRASE=""
 pulumi stack select -s dev
 pulumi preview --non-interactive
 pulumi update --non-interactive --yes
 
 # Lister les buckets
-export PROJECT_NAME="qualified-sum-417111"
-gcloud config set project ${PROJECT_NAME}
+source ../../.env
+gcloud config set project ${GCP_PROJECT_ID}
 gcloud storage ls
 ```
