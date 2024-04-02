@@ -6,7 +6,7 @@ Dans cette démonstration, nous allons démontrer comment utiliser les templates
 
 ```bash
 # Lister les templates disponibles
-pulumi list -l
+pulumi new -l
 pulumi new openstack-python --force
 ```
 
