@@ -19,6 +19,9 @@ pulumi update
 
 # Regarder le contenu du bucket (.pulumi/)
 gcloud storage ls --recursive ${PULUMI_STATE_NAME}
+
+# TIPS : Voir où est stocké le state
+pulumi whoami -v
 ```
 
 > L'option `--force` est utilisé car le dossier existe déjà et n'est pas vide.
