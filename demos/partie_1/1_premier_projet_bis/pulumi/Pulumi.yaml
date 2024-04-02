@@ -1,0 +1,6 @@
+name: my_first_vm_on_gcp
+runtime:
+  name: python
+  options:
+    virtualenv: venv
+description: Premier projet (une instance simple GCE)

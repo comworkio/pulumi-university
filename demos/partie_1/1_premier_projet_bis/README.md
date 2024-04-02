@@ -5,6 +5,7 @@ Dans cette démonstration, nous allons créer une première instance de compute 
 ## Les commandes
 
 ```bash
+cd pulumi/
 pulumi preview
 pulumi update
 ```
