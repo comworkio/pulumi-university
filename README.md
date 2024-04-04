@@ -1,8 +1,9 @@
 # Pulumi University
 
-Title: "Pulumi, ou comment gérer votre infrastructure avec votre langage préféré"
-
 ![](src/img/logo_devoxx_fr.png)
+
+Title: "Pulumi, ou comment gérer votre infrastructure avec votre langage préféré"
+Speakers: **Idriss Neumann**, **Alexis Fala**, **Julien Briault**
 
 ## Abstract
 
