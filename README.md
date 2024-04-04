@@ -2,6 +2,8 @@
 
 Title: "Pulumi, ou comment gérer votre infrastructure avec votre langage préféré"
 
+![](src/img/logo_devoxx_fr.png)
+
 ## Abstract
 
 N’avez-vous jamais rêvé de pouvoir gérer votre infrastructure avec votre langage de programmation préféré ? D'exposer vos scripts de provisionnement et déploiement d'infrastructure comme un véritable service web moderne et utilisable par le plus grand nombre ?
