@@ -1,5 +1,8 @@
 import pulumi
 import pulumi_gcp as gcp
+from lib.network import create_network, create_subnet
+from lib.firewall import create_firewall
+from lib.instance import create_instance
 
 # Import the program's configuration settings.
 config = pulumi.Config()
@@ -8,48 +11,14 @@ os_image = config.get("osImage", "debian-11")
 instance_tag = config.get("instanceTag", "webserver")
 service_port = config.get("servicePort", "80")
 
-# Create a new network for the virtual machine.
-network = gcp.compute.Network(
-    "demo1network",
-    gcp.compute.NetworkArgs(
-        auto_create_subnetworks=False,
-    ),
-)
+# Create network and subnet
+network = create_network()
+subnet = create_subnet(network.id)
 
-# Create a subnet on the network.
-subnet = gcp.compute.Subnetwork(
-    "demo1subnet",
-    gcp.compute.SubnetworkArgs(
-        ip_cidr_range="10.0.1.0/24",
-        network=network.id,
-    ),
-)
+# Create firewall
+firewall = create_firewall(network.self_link, instance_tag, service_port)
 
-# Create a firewall allowing inbound access over ports 80 (for HTTP) and 22 (for SSH).
-firewall = gcp.compute.Firewall(
-    "demo1firewall",
-    gcp.compute.FirewallArgs(
-        network=network.self_link,
-        allows=[
-            gcp.compute.FirewallAllowArgs(
-                protocol="tcp",
-                ports=[
-                    "22",
-                    service_port,
-                ],
-            ),
-        ],
-        direction="INGRESS",
-        source_ranges=[
-            "0.0.0.0/0",
-        ],
-        target_tags=[
-            instance_tag,
-        ],
-    ),
-)
-
-# Define a script to be run when the VM starts up.
+# Define metadata startup script
 metadata_startup_script = f"""#!/bin/bash
     echo '<!DOCTYPE html>
     <html lang="en">
@@ -65,45 +34,11 @@ metadata_startup_script = f"""#!/bin/bash
     sudo python3 -m http.server {service_port} &
     """
 
-# Create the virtual machine.
-instance = gcp.compute.Instance(
-    "demo1instance",
-    gcp.compute.InstanceArgs(
-        name="demo1instance",
-        machine_type=machine_type,
-        boot_disk=gcp.compute.InstanceBootDiskArgs(
-            initialize_params=gcp.compute.InstanceBootDiskInitializeParamsArgs(
-                image=os_image,
-            ),
-        ),
-        network_interfaces=[
-            gcp.compute.InstanceNetworkInterfaceArgs(
-                network=network.id,
-                subnetwork=subnet.id,
-                access_configs=[
-                    {},
-                ],
-            ),
-        ],
-        service_account=gcp.compute.InstanceServiceAccountArgs(
-            scopes=[
-                "https://www.googleapis.com/auth/cloud-platform",
-            ],
-        ),
-        allow_stopping_for_update=True,
-        metadata_startup_script=metadata_startup_script,
-        tags=[
-            instance_tag,
-        ],
-    ),
-    pulumi.ResourceOptions(depends_on=firewall),
-)
+# Create instance
+instance = create_instance(network.id, subnet.id, machine_type, os_image, metadata_startup_script, instance_tag, service_port, firewall)
 
-instance_ip = instance.network_interfaces.apply(
-    lambda interfaces: interfaces[0].access_configs[0].nat_ip
-)
-
-# Export the instance's name, public IP address, and HTTP URL.
+# Export instance details
+instance_ip = instance.network_interfaces.apply(lambda interfaces: interfaces[0].access_configs[0].nat_ip)
 pulumi.export("name", instance.name)
 pulumi.export("ip", instance_ip)
 pulumi.export("url", instance_ip.apply(lambda ip: f"http://{ip}:{service_port}"))
