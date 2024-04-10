@@ -5,6 +5,8 @@ buckets:
   - "part1_demo1_bis_states"
   - "part1_demo2_states"
   - "part1_demo3_states"
+  - "part1_demo4_states"
+  - "part1_demo8_states"
   # Partie 2
   - "part2_demo1_states"
   - "part2_demo2_states"
