@@ -1,0 +1,6 @@
+name: Modularite
+runtime:
+  name: python
+  options:
+    virtualenv: venv
+description: Modularite with Pulumi (in Python)

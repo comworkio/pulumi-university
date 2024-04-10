@@ -1,0 +1,11 @@
+encryptionsalt: v1:0bGHZn5AMEc=:v1:RFp+m7M08eQvHqa5:of2We+vTkX1K0ov/LjRyEssclbRrOw==
+config:
+  gcp:project: qualified-sum-417111
+  gcp:region: europe-west1
+  gcp:zone: europe-west1-b
+  my_first_vm_on_gcp:instanceTag: webserver
+  my_first_vm_on_gcp:machineType: f1-micro
+  my_first_vm_on_gcp:osImage: debian-11
+  my_first_vm_on_gcp:servicePort: "80"
+backend:
+  url: 'gs://part1_demo1_bis_states-6d0b7a1'
