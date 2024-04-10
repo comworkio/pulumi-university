@@ -8,4 +8,4 @@ config:
   my_first_vm_on_gcp:osImage: debian-11
   my_first_vm_on_gcp:servicePort: "80"
 backend:
-  url: 'gs://part1_demo1_bis_states-6d0b7a1'
+  url: 'gs://part1_demo5_states-acd9159'
