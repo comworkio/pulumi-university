@@ -6,7 +6,7 @@ Dans cette démonstration, nous allons démontrer comment utiliser les templates
 
 ```bash
 # Lister les templates disponibles
-pulumi new -l
+pulumi new -l # (via https://github.com/pulumi/templates)
 pulumi new openstack-python --force
 
 # Custom template (via dépôt Git)

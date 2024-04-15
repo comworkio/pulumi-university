@@ -8,4 +8,3 @@ bucket = storage.Bucket('my-bucket')
 
 # Export the bucket self-link
 pulumi.export('bucketSelfLink', bucket.self_link)
-

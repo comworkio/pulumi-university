@@ -5,10 +5,6 @@ Dans cette démonstration, nous allons voir comment fonctionne le stockage de l'
 ## Les commandes
 
 ```bash
-# Lister les templates disponibles
-pulumi list -l
-pulumi new google-native-python --force
-
 # gcloud auth login <e-mail>
 
 # Possible de déclarer le bucket (backend) via une variable d'env :
