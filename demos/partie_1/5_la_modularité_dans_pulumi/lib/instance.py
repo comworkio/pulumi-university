@@ -3,9 +3,9 @@ import pulumi_gcp as gcp
 
 def create_instance(network_id, subnet_id, machine_type, os_image, metadata_startup_script, instance_tag, service_port, firewall_dependency):
     return gcp.compute.Instance(
-        "demo1instance",
+        "demo1bis",
         gcp.compute.InstanceArgs(
-            name="demo1instance",
+            name="demo1bis",
             machine_type=machine_type,
             boot_disk=gcp.compute.InstanceBootDiskArgs(
                 initialize_params=gcp.compute.InstanceBootDiskInitializeParamsArgs(
