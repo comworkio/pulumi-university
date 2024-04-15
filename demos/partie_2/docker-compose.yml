@@ -1,0 +1,19 @@
+version: '3.3'
+services:
+  pulumi_university_api:
+    restart: always
+    image: pulumi_university_api:latest
+    container_name: pulumi_university_api
+    networks:
+      - pulumi-university
+    env_file:
+      - .env
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+      target: api
+    ports:
+      - "8000:5000"
+networks:
+  pulumi-university:
+    driver: bridge
