@@ -1,5 +1,4 @@
 from adapters.provider.ProviderAdapter import ProviderAdapter
-from utils.size import get_enum_value
 from utils.logger import log_msg
 
 class LogAdapter(ProviderAdapter):
